@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.preference.PreferenceManager;
+import android.support.v7.preference.SeekBarPreference;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private void setupSharedPreferences() {
         // Get all of the values from shared preferences to set it up
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
+        int seekbarValue = sharedPreferences.getInt(SEEKBAR_SHARED_KEY,0);
+        Log.d(TAG, "setupSharedPreferences: int "+seekbarValue);
+//        SettingFragment.presentValue = seekbarValue;
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
