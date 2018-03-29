@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceCompat
+        android:defaultValue="@bool/default_switch"
+        android:key="switchON"
+        android:summaryOff="@string/hidden_text"
+        android:summaryOn="@string/shown_text"
+        android:title="Mode ON" />
+    <PreferenceCategory android:title="Decorate">
+        <CheckBoxPreference
+            android:defaultValue="@bool/default_check"
+            android:key="allUsers"
+            android:summaryOff="@string/hidden_text"
+            android:summaryOn="@string/shown_text"
+            android:title="All" />
+
+
+        <com.example.momenali.custompreference.SeekbarPreference
+            android:defaultValue="light"
+            android:key="Seekbar_after" />
+    </PreferenceCategory>
+</PreferenceScreen>
